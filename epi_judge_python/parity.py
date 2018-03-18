@@ -1,6 +1,10 @@
 def parity(x):
     # Implement this placeholder.
-    return 0
+    parity = 0
+    while x:
+        parity ^= 1
+        x &= x - 1
+    return parity
 
 
 from test_framework import test_utils_generic_main, test_utils
