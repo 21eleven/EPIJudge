@@ -1,6 +1,11 @@
 short Parity(unsigned long x) {
   // Implement this placeholder.
-  return 0;
+  short parity = 0;
+  while ( x > 0 ) {
+	  parity ^= 1;
+	  x = x & x - 1;
+	}
+  return parity;
 }
 
 #include "test_framework/test_utils_generic_main.h"
