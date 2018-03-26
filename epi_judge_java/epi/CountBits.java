@@ -8,7 +8,12 @@ public class CountBits {
 
   public static short countBits(int x) {
     // Implement this placeholder.
-    return 0;
+    short count = 0;
+    while (x > 0) {
+      count += 1;
+      x = x & x - 1;
+    }
+    return count;
   }
 
   public static void main(String[] args) {
