@@ -4,6 +4,7 @@ epi_judge_java/java_build/
 
 # CLIion CMake builds
 cmake-build-debug
+epi_judge_cpp/cpp_build/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
