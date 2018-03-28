@@ -1,6 +1,9 @@
 def swap_bits(x, i, j):
     # Implement this placeholder.
-    return 0
+    if x >> i & 1 != x >> j & 1:
+       x ^= 1 << i
+       x ^= 1 << j
+    return x
 
 
 from test_framework import test_utils_generic_main, test_utils
