@@ -3,6 +3,7 @@ Done
 parity.py
 count_bits.py
 swap_bits.py
+closest_int_same_weight.py
 primitive_divide.py
 primitive_multiply.py
 
@@ -30,7 +31,6 @@ buy_and_sell_stock.py
 buy_and_sell_stock_twice.py
 calendar_rendering.py
 circular_queue.py
-closest_int_same_weight.py
 collatz_checker.py
 combinations.py
 convert_base.py
