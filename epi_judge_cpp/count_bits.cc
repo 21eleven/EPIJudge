@@ -1,7 +1,12 @@
 
 short CountBits(unsigned int x) {
   // Implement this placeholder.
-  return 0;
+  short count = 0;
+  while ( x > 0 ) {
+	count++;
+	x &= x--;
+  }
+  return count;
 }
 
 #include "test_framework/test_utils_generic_main.h"

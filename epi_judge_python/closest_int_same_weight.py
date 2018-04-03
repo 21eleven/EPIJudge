@@ -1,14 +1,17 @@
 def closest_int_same_bit_count(x):
     # Implement this placeholder.
-    """for i in range(64-1):
+    """
+    for i in range(64-1):
         if (x >> i & 1) != (x >> (i+1) & 1):
             x^= 1 << i
             x ^= 1 << i+1
-            return x"""
+            return x
+    """
     if (x & ~(x - 1)) > (~x & (x + 1)):
         return x ^ (x & ~(x - 1)) ^ ((x & ~(x-1)) >> 1)
     else:
         return x ^ (~x & (x+1)) ^ ((~x & (x+1)) >> 1)
+    #"""
 
 from test_framework import test_utils_generic_main, test_utils
 

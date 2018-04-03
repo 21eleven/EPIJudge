@@ -1,6 +1,15 @@
 int Divide(int x, int y) {
   // Implement this placeholder.
-  return 0;
+  int result = 0;
+  short power = 32;
+  while (x >= y) {
+	while (1 << power > x) {
+		power--;
+	}
+	x -= y << power;
+	result += 1 << power;
+  }
+  return result;
 }
 
 #include "test_framework/test_utils_generic_main.h"
