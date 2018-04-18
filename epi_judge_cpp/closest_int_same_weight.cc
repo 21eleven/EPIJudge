@@ -1,8 +1,17 @@
 
-
 unsigned long ClosestIntSameBitCount(unsigned long x) {
   // Implement this placeholder.
-  return 0;
+  int limit = 64;
+  int i = 0;
+  while (i < limit) {
+    // if ((x & (1 << i)) != ((x & (1 << i + 1))>> 1)) {
+    if (((x >> i) & 1) != ((x >> i+1) & 1)) {
+       x ^=  (1 << i);
+       x ^= (1 << i+1);
+       return x;
+    }
+    i++; 
+  }
 }
 
 #include "test_framework/test_utils_generic_main.h"

@@ -6,6 +6,7 @@ swap_bits.py
 closest_int_same_weight.py
 primitive_divide.py
 primitive_multiply.py
+power_x_y.py
 
 
 ToDo
@@ -146,7 +147,6 @@ picking_up_coins.py
 pivot_list.py
 posting_list_node.py
 power_set.py
-power_x_y.py
 pretty_printing.py
 prime_sieve.py
 progress.txt
