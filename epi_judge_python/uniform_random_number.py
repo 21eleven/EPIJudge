@@ -10,8 +10,35 @@ def zero_one_random():
 
 
 def uniform_random(lower_bound, upper_bound):
-    # Implement this placeholder.
-    return 0
+	_range = upper_bound - lower_bound + 1
+	flips = 0
+	while 2**flips < _range:
+		flips += 1
+	dist_range = 2**flips
+	reject = dist_range - _range
+	bits = flips
+	out_of_bounds = True
+	while out_of_bounds:
+		bitstring = ''
+		for _ in range(bits):
+			bitstring += str(zero_one_random())
+		value = int(bitstring,2)
+		if value < (dist_range - reject):
+			out_of_bounds = False
+
+	return value
+
+def uniform_random1(lower_bound, upper_bound):
+	outcomes = upper_bound - lower_bound + 1
+	while True:
+		i = 0
+		result = 0
+		while (1 << i) < outcomes:
+			result = (result << 1) | zero_one_random()
+			i += 1
+		if result < outcomes:
+			break
+	return result + lower_bound
 
 
 @enable_timer_hook
