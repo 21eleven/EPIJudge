@@ -4,7 +4,7 @@ def is_palindrome_number(x):
 	if x == 0: return True
 	upper = 100000000000000000000
 	lower = 10
-#	upper_check, lower_check = x, x
+	#upper_check, lower_check = x, x
 	while x//upper==0:
 		upper//=10
 	while upper*10 >= lower:

@@ -7,6 +7,9 @@ closest_int_same_weight.py
 primitive_divide.py
 primitive_multiply.py
 power_x_y.py
+is_number_palindromic.py
+uniform_random_number.py
+rectangle_intersection.py
 
 
 ToDo
@@ -78,7 +81,6 @@ is_array_dominated.py
 is_circuit_wirable.py
 is_list_cyclic.py
 is_list_palindromic.py
-is_number_palindromic.py
 is_string_decomposable_into_words.py
 is_string_in_matrix.py
 is_string_palindromic_punctuation.py
@@ -155,7 +157,6 @@ queue_with_max.py
 random_permutation.py
 random_subset.py
 real_square_root.py
-rectangle_intersection.py
 refueling_schedule.py
 regular_expression.py
 remove_duplicates_from_sorted_list.py
@@ -217,6 +218,5 @@ tree_preorder.py
 tree_right_sibling.py
 tree_with_parent_inorder.py
 two_sum.py
-uniform_random_number.py
 valid_ip_addresses.py
 zip_list.py
