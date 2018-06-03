@@ -2,17 +2,14 @@ use std::env;
 
 fn main() {
 	let args: Vec<String> = env::args().collect();
-	let input = &args[1].parse::<u64>().unwrap();
+	let mut input = args[1].parse::<u64>().unwrap();
 	let mut parity: u32 = 0;
-	/*let mut n = input;	
 	loop {
+		if input  == 0u64 { break; }
 		parity ^= 1;
-		let mut check = n & n - 1;
-		n = &check;
-		println!("{}", input);
-		if n  == &0 { break; }
-	}*/
-	
+		input &= input - 1;
+	}
+	/*
 	let mut count = 0u32;
 	loop {	
 		if input >> count & 1 == 1 {
@@ -22,6 +19,7 @@ fn main() {
 			break;
 		}
 		count += 1
-	}
+	}*/
+
 	println!("{}", parity);
 }
