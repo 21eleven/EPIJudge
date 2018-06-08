@@ -10,8 +10,12 @@ public class Parity {
     short parity = 0;
 
     while ( x != 0 ) {
-	  parity ^= 1;
-	  x = x & x - 1;
+	  //parity ^= 1;
+	  //x = x & x - 1;
+	  if ((x & 1) == 1) {
+		parity ^= 1;	
+	  }
+	  x = x >> 1;
     }
     return parity;
   }

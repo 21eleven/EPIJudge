@@ -3,6 +3,7 @@ Done
 parity.py
 count_bits.py
 swap_bits.py
+reverse_bits.py
 closest_int_same_weight.py
 primitive_divide.py
 primitive_multiply.py
