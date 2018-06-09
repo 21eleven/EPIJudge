@@ -13,12 +13,16 @@ if __name__ == "__main__":
     len_t = len(tests)
     for t in tests[1:]:
         t = t.split('\t')
-        test_input = t[0]
         #print(len(t))
-        test_cmd = [ "./{}".format(name), test_input]
+        if len(t) == 3:
+            test_input = [t[0]]
+            check = t[1]
+        if len(t) == 4:
+            test_input = t[0:2]
+            check = t[2]
+        test_cmd = [ "./{}".format(name)] + test_input
         #print(" ".join(test_cmd))
         test_output = subprocess.run(test_cmd, stdout=subprocess.PIPE).stdout.decode('utf-8').replace('\n','')
-        check = t[1]
         #print(test_input, test_output, check)
         if check != test_output:
             print("FAILED TEST!")
