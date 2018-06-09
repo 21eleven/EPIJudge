@@ -20,6 +20,9 @@ if __name__ == "__main__":
         if len(t) == 4:
             test_input = t[0:2]
             check = t[2]
+        if len(t) == 5:
+            test_input = t[0:3]
+            check = t[3]
         test_cmd = [ "./{}".format(name)] + test_input
         #print(" ".join(test_cmd))
         test_output = subprocess.run(test_cmd, stdout=subprocess.PIPE).stdout.decode('utf-8').replace('\n','')
