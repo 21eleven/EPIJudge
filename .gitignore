@@ -1,3 +1,8 @@
+#ignore compiled files
+*
+!*.*
+!*/
+
 # JetBrains IDEs (CLion, IntelliJ, and PyCharm)
 .idea
 epi_judge_java/java_build/
@@ -12,3 +17,4 @@ __pycache__/
 *$py.class
 *swp
 *.class
+
